@@ -1,0 +1,7 @@
+FROM busybox
+FROM openjdk:8-jdk-alpine
+FROM tomcat:8.0.20-jre8
+#COPY test.sh /test.sh
+COPY PET_PRI_GND_DCUS_NUS_W.csv /usr/local/tomcat/bin/PET_PRI_GND_DCUS_NUS_W.csv
+COPY gas.war /usr/local/tomcat/webapps/gas.war
+#CMD ["/test.sh"]
